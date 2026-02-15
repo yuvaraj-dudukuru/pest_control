@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. WhatsApp Link Logic
     const encodedMessage = encodeURIComponent(WHATSAPP_MESSAGE);
     const whatsappUrl = `https://wa.me/${CONTACT_NUMBER}?text=${encodedMessage}`;
-    
+
     const whatsappLinks = document.querySelectorAll('.whatsapp-link');
     whatsappLinks.forEach(link => {
         link.href = whatsappUrl;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. FAQ Accordion Logic
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     otherItem.classList.remove('active');
                 }
             });
-            
+
             // Toggle current item
             item.classList.toggle('active');
         });
@@ -41,6 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+        });
+    });
+
+    // 4. "Add to Plan" Animation Logic
+    const addButtons = document.querySelectorAll('.service-footer .btn-secondary');
+
+    addButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Prevent multiple rapid clicks
+            if (btn.classList.contains('btn-success')) return;
+
+            const originalText = btn.innerHTML;
+
+            // Apply animation and success state
+            btn.classList.add('btn-click-anim', 'btn-success');
+            btn.innerHTML = '<i class="fas fa-check"></i> Added';
+
+            // Remove animation class after it plays
+            setTimeout(() => {
+                btn.classList.remove('btn-click-anim');
+            }, 400);
+
+            // Revert after feedback period
+            setTimeout(() => {
+                btn.classList.remove('btn-success');
+                btn.innerHTML = originalText;
+            }, 2000);
         });
     });
 });
