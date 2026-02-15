@@ -1,5 +1,5 @@
 // Configuration - Easily changeable phone number
-const CONTACT_NUMBER = "919999999999";
+const CONTACT_NUMBER = "916305017247";
 const WHATSAPP_MESSAGE = "i am interested";
 
 document.addEventListener('DOMContentLoaded', () => {
