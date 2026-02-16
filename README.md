@@ -9,10 +9,15 @@ You can view the live demonstration here: [Live Demo](https://yuvaraj-dudukuru.g
 ## ✨ Features
 
 - **Modern Responsive Design**: Fully optimized for desktop, tablet, and mobile viewing.
-- **Client-Ready Layout**: Professional hero section, service grids, feature highlights, and FAQ sections.
-- **WhatsApp Integration**: Floating contact button and Hero CTA with pre-filled messages for instant engagement.
-- **Performance Optimized**: Zero frameworks or heavy dependencies; built with clean HTML5, CSS3, and Vanilla JavaScript.
-- **Interactive UI**: Custom FAQ accordion and smooth scroll navigation.
+- **CEO-Requested Service Options**: 6 targeted services for the Vijayawada market:
+  - Kitchen & Bathroom
+  - Apartment
+  - Independent House
+  - Insect & Bug
+  - Rodent
+  - Commercial
+- **Dynamic WhatsApp Leads**: Each service card generates a unique pre-filled message including the service name.
+- **Interactive UI**: High-contrast dark mode, custom success animations, and smooth FAQ accordion.
 
 ## 🛠️ Built With
 
